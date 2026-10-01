@@ -1,0 +1,9 @@
+Epoch 020 | Loss: 3.3394 | CER: 100.00%
+Epoch 040 | Loss: 3.1415 | CER: 100.00%
+Epoch 060 | Loss: 3.0872 | CER: 100.00%
+Epoch 080 | Loss: 2.9744 | CER: 100.00%
+Epoch 100 | Loss: 2.8666 | CER: 100.00%
+Epoch 120 | Loss: 2.7679 | CER: 100.00%
+Epoch 140 | Loss: 2.6855 | CER: 100.00%
+Epoch 160 | Loss: 2.6484 | CER: 100.00%
+Epoch 180 | Loss: 2.6418 | CER: 100.00%
