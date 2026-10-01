@@ -1,79 +1,79 @@
 Target: yes
-Pred: 
-CER: 100.00%
+Pred: yes
+CER: 0.00%
 
 Target: comfortable dear
-Pred: 
-CER: 100.00%
+Pred: comfortable dear
+CER: 0.00%
 
 Target: lectures
-Pred: 
-CER: 100.00%
+Pred: lectures
+CER: 0.00%
 
 Target: otto winked at me
-Pred: 
-CER: 100.00%
+Pred: otto winked at me
+CER: 0.00%
 
 Target: the twenties
-Pred: 
-CER: 100.00%
+Pred: the twenties
+CER: 0.00%
 
 Target: shiloh
-Pred: 
-CER: 100.00%
+Pred: shiloh
+CER: 0.00%
 
 Target: to pickle eggs
-Pred: 
-CER: 100.00%
+Pred: to pickle eggs
+CER: 0.00%
 
 Target: most wonderful
-Pred: 
-CER: 100.00%
+Pred: most wonderful
+CER: 0.00%
 
 Target: no doubt
-Pred: 
-CER: 100.00%
+Pred: no doubt
+CER: 0.00%
 
 Target: where is that
-Pred: 
-CER: 100.00%
+Pred: where is that
+CER: 0.00%
 
 Target: hot rolls
-Pred: 
-CER: 100.00%
+Pred: hot rolls
+CER: 0.00%
 
 Target: george
-Pred: 
-CER: 100.00%
+Pred: george
+CER: 0.00%
 
 Target: what does he want
-Pred: 
-CER: 100.00%
+Pred: what does he want
+CER: 0.00%
 
 Target: honestly
-Pred: 
-CER: 100.00%
+Pred: honestly
+CER: 0.00%
 
 Target: the ladies
-Pred: 
-CER: 100.00%
+Pred: the ladies
+CER: 0.00%
 
 Target: french forcemeat
-Pred: 
-CER: 100.00%
+Pred: french forcemeat
+CER: 0.00%
 
 Target: are you a giant
-Pred: 
-CER: 100.00%
+Pred: are you a giant
+CER: 0.00%
 
 Target: i had no illusions
-Pred: 
-CER: 100.00%
+Pred: i had no illusions
+CER: 0.00%
 
 Target: ten seconds
-Pred: 
-CER: 100.00%
+Pred: ten seconds
+CER: 0.00%
 
 Target: why don't you move the pony
-Pred: 
-CER: 100.00%
+Pred: why don't you move the pony
+CER: 0.00%
