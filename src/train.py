@@ -14,7 +14,8 @@ def run():
     os.makedirs("data", exist_ok=True)
     os.makedirs("outputs", exist_ok=True)
     
-    dl = DataLoader(SpeechOverfitDataset("data"), batch_size=20, collate_fn=CTCCollateFn(LogMelFeatureExtractor().to(dev), tok))
+    # FIX: Kept LogMelFeatureExtractor on CPU to match DataLoader audio tensors
+    dl = DataLoader(SpeechOverfitDataset("data"), batch_size=20, collate_fn=CTCCollateFn(LogMelFeatureExtractor(), tok))
     model = SpeechToTextModel().to(dev)
     opt = torch.optim.AdamW(model.parameters(), lr=4e-4)
     sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, 180)
