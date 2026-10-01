@@ -14,11 +14,13 @@ def run():
     os.makedirs("data", exist_ok=True)
     os.makedirs("outputs", exist_ok=True)
     
-    # FIX: Kept LogMelFeatureExtractor on CPU to match DataLoader audio tensors
     dl = DataLoader(SpeechOverfitDataset("data"), batch_size=20, collate_fn=CTCCollateFn(LogMelFeatureExtractor(), tok))
     model = SpeechToTextModel().to(dev)
-    opt = torch.optim.AdamW(model.parameters(), lr=4e-4)
-    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, 180)
+    
+    # FIX: Higher learning rate and more epochs to force memorization (800 total steps)
+    EPOCHS = 800
+    opt = torch.optim.AdamW(model.parameters(), lr=2e-3)
+    sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, EPOCHS)
     crit = nn.CTCLoss(blank=0, zero_infinity=True)
     dec = GreedyCTCDecoder(tok)
     
@@ -27,7 +29,7 @@ def run():
     
     logs = []
     print(f"Training started on {dev}...")
-    for ep in range(1, 181):
+    for ep in range(1, EPOCHS + 1):
         model.train()
         opt.zero_grad()
         probs = model(mels)
@@ -38,7 +40,8 @@ def run():
         opt.step()
         sched.step()
         
-        if ep % 20 == 0 or ep == 180:
+        # Print every 50 epochs so we don't spam the console
+        if ep % 50 == 0 or ep == EPOCHS:
             model.eval()
             with torch.no_grad():
                 preds = dec.decode(model(mels), in_lens)
