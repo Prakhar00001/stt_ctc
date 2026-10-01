@@ -20,9 +20,11 @@ class SpeechOverfitDataset(Dataset):
                         for line in f:
                             parts = line.strip().split(" ", 1)
                             if len(parts) == 2 and os.path.exists(p := os.path.join(r, f"{parts[0]}.flac")):
-                                meta = torchaudio.info(p)
-                                dur = meta.num_frames / meta.sample_rate
-                                if 1.2 <= dur <= 3.2 and (((meta.num_frames // 160 + 1) + 1) // 2) > len(self.tok.normalize(parts[1])) + 4:
+                                # FIXED: Use torchaudio.load instead of torchaudio.info
+                                w, sr = torchaudio.load(p)
+                                num_frames = w.shape[1]
+                                dur = num_frames / sr
+                                if 1.2 <= dur <= 3.2 and (((num_frames // 160 + 1) + 1) // 2) > len(self.tok.normalize(parts[1])) + 4:
                                     cands.append((p, self.tok.normalize(parts[1]), dur))
         
         for p, t, d in sorted(cands, key=lambda x: x[2])[:num_samples]:
