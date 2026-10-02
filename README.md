@@ -33,27 +33,36 @@ stt_ctc/
 ├── requirements.txt        # Dependencies
 └── stt_ctc.ipynb           # Cloud-ready Colab execution artifact
 
+☁️ How to Run on Google Colab
 
-🚀 How to Run
+The fastest way to verify the 0.00% CER convergence is via Google Colab.
 
-1. Clone the repository:
+Step 1: Open Google Colab and create a new notebook.
+
+Step 2: Go to Runtime > Change runtime type and select T4 GPU (Hardware Accelerator).
+
+Step 3: Paste the following code into the first cell and run it:
+
+!git clone [https://github.com/Prakhar00001/stt_ctc.git](https://github.com/Prakhar00001/stt_ctc.git)
+%cd stt_ctc
+!pip install -r requirements.txt
+!python -m src.train
+
+(The script will automatically download the 20 LibriSpeech samples, train the model, and print the live Loss and CER metrics directly to the Colab console).
+
+💻 How to Run Locally
+
+If testing locally in a terminal or VS Code:
 
 git clone [https://github.com/Prakhar00001/stt_ctc.git](https://github.com/Prakhar00001/stt_ctc.git)
 cd stt_ctc
-
-2. Install dependencies:
-
 pip install -r requirements.txt
-
-3. Trigger the training pipeline:
-
 python -m src.train
 
 📊 Results
+
 The model achieves perfect memorization of the 20-sample dataset across 800 epochs, demonstrating stable gradient descent and flawless sequence alignment.
 
 Initial State: ~3.34 Loss | 100.00% CER
 
 Final State: <0.0010 Loss | 0.00% CER
-
-
