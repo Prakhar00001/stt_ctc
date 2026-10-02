@@ -43,7 +43,7 @@ Step 2: Go to Runtime > Change runtime type and select T4 GPU (Hardware Accelera
 
 Step 3: Paste the following code into the first cell and run it:
 
-!git clone [https://github.com/Prakhar00001/stt_ctc.git](https://github.com/Prakhar00001/stt_ctc.git)
+!git clone https://github.com/Prakhar00001/stt_ctc.git
 %cd stt_ctc
 !pip install -r requirements.txt
 !python -m src.train
@@ -54,7 +54,7 @@ Step 3: Paste the following code into the first cell and run it:
 
 If testing locally in a terminal or VS Code:
 
-git clone [https://github.com/Prakhar00001/stt_ctc.git](https://github.com/Prakhar00001/stt_ctc.git)
+!git clone https://github.com/Prakhar00001/stt_ctc.git
 cd stt_ctc
 pip install -r requirements.txt
 python -m src.train
