@@ -30,12 +30,12 @@ Target: most wonderful
 Pred: most wonderful
 CER: 0.00%
 
-Target: no doubt
-Pred: no doubt
-CER: 0.00%
-
 Target: where is that
 Pred: where is that
+CER: 0.00%
+
+Target: no doubt
+Pred: no doubt
 CER: 0.00%
 
 Target: hot rolls
@@ -66,12 +66,12 @@ Target: are you a giant
 Pred: are you a giant
 CER: 0.00%
 
-Target: i had no illusions
-Pred: i had no illusions
-CER: 0.00%
-
 Target: ten seconds
 Pred: ten seconds
+CER: 0.00%
+
+Target: i had no illusions
+Pred: i had no illusions
 CER: 0.00%
 
 Target: why don't you move the pony
